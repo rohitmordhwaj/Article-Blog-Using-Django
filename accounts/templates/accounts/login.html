@@ -1,0 +1,34 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<h1>Login</h1>
+<form class="site-form"action="{% url 'accounts:login'%}"method="post">
+	{%csrf_token%}
+	{{form}}
+	<input type="submit" value="login">
+	
+	<style type="text/css">
+	
+div {
+  
+  border: 5px solid gray;
+  color: white;
+  margin: auto;
+  width: 30%;
+  border: 3px solid blue;
+  padding: 10px;
+  text-align: justify;
+
+}
+
+	body{
+	background: white;
+	background-image: url(/static/2.jpeg);
+			}
+</style>
+
+</form>
+
+
+
+{% endblock %}

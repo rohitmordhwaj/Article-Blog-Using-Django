@@ -1,0 +1,43 @@
+{%extends 'base_layout.html'%}
+
+{% block content %}
+<nav>
+            <ul>
+                <li>
+                    <form class="logout-link" action="{%url 'accounts:logout'%}" method="post">
+                        {%csrf_token%}
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            </ul>
+ </nav>
+<h1>Artilce List </h1>
+<div class="articles">
+   {%for article in articles%}
+     <div class = "article">
+     	<h2><a href="{% url 'articles:detail' slug=article.slug %}">{{article.title }}</a></h2>
+     	<p>{{article.snippet }}</p>
+     	<p>{{article.date }}</p>
+     </div   {% endfor %}
+
+ </div>
+
+
+    <style>
+
+     	body{
+	background: white;
+	background-image: url(/static/2.jpeg);
+			}
+
+
+
+     </style>
+
+
+ 
+ {% endblock   %}
+
+
+
+ 

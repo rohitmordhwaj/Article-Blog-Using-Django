@@ -1,0 +1,29 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="article-detail">
+	<div class="w3-container">
+  <h2>{{article.title}}</h2>
+
+  <div class="w3-card-4" style="width:50%">
+    <img src="{{article.thumb.url}}" alt="Alps" style="width:100%">
+    <div class="w3-container w3-center">
+      <p>{{article.body}}</p>
+    </div>
+  </div>
+</div>
+</div>
+
+    <style>
+
+     	body{
+	background: white;
+	background-image: url(/static/1.jpeg);
+			}
+
+
+
+     </style>
+{% endblock %}
+
+
